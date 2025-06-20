@@ -1,0 +1,1 @@
+This is a file uploading to AWS S3
