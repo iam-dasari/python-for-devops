@@ -11,4 +11,3 @@ print(my_filtered_list)
 my_custom_list = [1,2,3,4,5,6,7,8,9,10]
 my_manipulated_list = list(map(lambda x: x+x,my_custom_list))
 print(my_manipulated_list)
-
