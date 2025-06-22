@@ -11,7 +11,7 @@ import os
 
 s3 = boto3.client('s3',region_name="us-east-1")
 region="us-west-2"
-bucket_name="dasari-terraform-eks-state-s3-bucket1-boto3"
+bucket_name="backet-name"
 
 #Show buckets from AWS S3
 def show_buckets(s3):
@@ -35,7 +35,7 @@ def create_bucket(bucket_name):
 
 #Upload the backup file into the S3 bucket
 def upload_files(s,d):
-    s3.upload_file(s, "dasari-terraform-eks-state-s3-bucket1-boto3", d)
+    s3.upload_file(s, "bucket-name", d)
     
 #Take backup of files on daily basis
 def backup_files(source,destination):
@@ -49,7 +49,7 @@ def backup_files(source,destination):
 
 
 #Call backup_files function
-source="E:/dasari-devops-practice/python/python-for-devops/utils/"
-destination="E:/dasari-devops-practice/python/python-for-devops/utils/backups/"
+source="source-path"
+destination="destination-path"
 backup_files(source,destination)
 show_buckets(s3)
